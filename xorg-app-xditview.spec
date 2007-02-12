@@ -1,5 +1,5 @@
 Summary:	xditview application
-Summary(pl):	Aplikacja xditview
+Summary(pl.UTF-8):   Aplikacja xditview
 Name:		xorg-app-xditview
 Version:	1.0.1
 Release:	1
@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xditview application.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacja xditview.
 
 %prep
