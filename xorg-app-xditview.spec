@@ -1,5 +1,5 @@
 Summary:	xditview application
-Summary(pl.UTF-8):   Aplikacja xditview
+Summary(pl.UTF-8):	Aplikacja xditview
 Name:		xorg-app-xditview
 Version:	1.0.1
 Release:	1
