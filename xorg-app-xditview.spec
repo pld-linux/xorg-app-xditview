@@ -2,11 +2,12 @@ Summary:	xditview application
 Summary(pl.UTF-8):	Aplikacja xditview
 Name:		xorg-app-xditview
 Version:	1.0.1
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xditview-%{version}.tar.bz2
 # Source0-md5:	e9a7192ef29453b8c810ddd556a463c0
+Patch0:		%{name}-xaw.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -27,6 +28,7 @@ Aplikacja xditview.
 
 %prep
 %setup -q -n xditview-%{version}
+%patch0 -p1
 
 %build
 %{__aclocal}
