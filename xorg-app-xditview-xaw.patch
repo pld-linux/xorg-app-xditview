@@ -1,0 +1,19 @@
+commit a73267ed9bca410a83fd2a9ff3bcc0b659804295
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Wed Aug 20 10:32:50 2008 -0400
+
+    xaw8 is gone, use xaw7
+
+diff --git a/configure.ac b/configure.ac
+index fb19f3a..bc31a5b 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -36,7 +36,7 @@ AC_CHECK_FUNC([mkstemp],
+    AC_DEFINE(HAS_MKSTEMP,1,[Define to 1 if you have the `mkstemp' function.]))
+ 
+ # Checks for pkg-config packages
+-XAW_CHECK_XPRINT_SUPPORT(XDITVIEW)
++PKG_CHECK_MODULES(XDITVIEW, xaw7)
+ AC_SUBST(XDITVIEW_CFLAGS)
+ AC_SUBST(XDITVIEW_LIBS)
+ 
