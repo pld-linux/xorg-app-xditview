@@ -1,34 +1,33 @@
-Summary:	xditview application
-Summary(pl.UTF-8):	Aplikacja xditview
+Summary:	xditview application to display ditroff output on an X display
+Summary(pl.UTF-8):	Aplikacja xditview - wyświetlanie wyjścia ditroff na ekranie X
 Name:		xorg-app-xditview
-Version:	1.0.1
-Release:	4
+Version:	1.0.2
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xditview-%{version}.tar.bz2
-# Source0-md5:	e9a7192ef29453b8c810ddd556a463c0
-Patch0:		%{name}-xaw.patch
+# Source0-md5:	dbf480019b75377154b6976726809bba
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXaw-devel
+BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.8
 # for dir (only?)
 Requires:	xorg-data-xbitmaps
 Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xditview application.
+xditview application displays ditroff output on an X display.
 
 %description -l pl.UTF-8
-Aplikacja xditview.
+Aplikacja xditview wyświetla wyjście ditroff na ekranie X.
 
 %prep
 %setup -q -n xditview-%{version}
-%patch0 -p1
 
 %build
 %{__aclocal}
@@ -50,8 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/xditview
 %{_datadir}/X11/app-defaults/Xditview*
-%{_includedir}/X11/bitmaps/*dblarrow
+%{_includedir}/X11/bitmaps/[lr]dblarrow
 %{_mandir}/man1/xditview.1x*
