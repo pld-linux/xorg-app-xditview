@@ -1,16 +1,17 @@
 Summary:	xditview application to display ditroff output on an X display
 Summary(pl.UTF-8):	Aplikacja xditview - wyświetlanie wyjścia ditroff na ekranie X
 Name:		xorg-app-xditview
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xditview-%{version}.tar.bz2
-# Source0-md5:	a9a49c84477be93cdd1cd7726d758574
+# Source0-md5:	e0d4497c963022eaa86bed6159882c69
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
@@ -52,5 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/xditview
 %{_datadir}/X11/app-defaults/Xditview*
-%{_includedir}/X11/bitmaps/[lr]dblarrow
-%{_mandir}/man1/xditview.1x*
+%{_includedir}/X11/bitmaps/ldblarrow
+%{_includedir}/X11/bitmaps/rdblarrow
+%{_mandir}/man1/xditview.1*
